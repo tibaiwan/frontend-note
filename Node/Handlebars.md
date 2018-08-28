@@ -3,13 +3,12 @@
 [handlebars 官网](https://handlebarsjs.com/)
 
 * [简单示例](#简单示例)
-* [HTML 转义](#HTML-转义)
+* [HTML 转义](#html-转义)
 * [块级表达式](#块级表达式)
 * [模板内备注](#模板内备注)
-* [Helpers](#Helpers)
-* [Partials](#Partials)
-* [Built-In Helpers](#Built-In-Helpers)
-* [模板内备注](#模板内备注)
+* [Helpers](#helpers)
+* [Partials](#partials)
+* [Built-In Helpers](#built-in-helpers)
 
 ### 简单示例
 ```
