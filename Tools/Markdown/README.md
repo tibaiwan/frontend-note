@@ -133,7 +133,22 @@ void main()
 效果：
 >`ctrl+a`    
 
-### 12、 其它：
+### 12、 表格
+
+`Name | Academy | score `  
+`- | :-: | -: `  
+`Harry Potter | Gryffindor| 90 `  
+`Hermione Granger | Gryffindor | 100 `  
+`Draco Malfoy | Slytherin | 90`  
+
+效果：
+Name | Academy | score 
+- | :-: | -: 
+Harry Potter | Gryffindor| 90 
+Hermione Granger | Gryffindor | 100 
+Draco Malfoy | Slytherin | 90
+
+### 13、 其它：
 列表的使用(非traditonal markdown)：
 
 用`|`表示表格纵向边界，表头和表内容用`-`隔开，并可用`:`进行对齐设置，两边都有`:`则表示居中，若不加`:`则默认左对齐。
