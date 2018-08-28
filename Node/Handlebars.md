@@ -2,6 +2,15 @@
 
 [handlebars 官网](https://handlebarsjs.com/)
 
+* [简单示例](#简单示例)
+* [HTML 转义](#HTML-转义)
+* [块级表达式](#块级表达式)
+* [模板内备注](#模板内备注)
+* [Helpers](#Helpers)
+* [Partials](#Partials)
+* [Built-In Helpers](#Built-In-Helpers)
+* [模板内备注](#模板内备注)
+
 ### 简单示例
 ```
 <div class="entry">
@@ -51,7 +60,7 @@ Handlebars.registerHelper('link', function(text, url) {
 });
 ```
 
-## 块级表达式
+### 块级表达式
 context:
 
 ```
