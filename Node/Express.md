@@ -8,6 +8,7 @@
     - [路由定义](#路由定义)
     - [路由路径](#路由路径)
     - [路由句柄](#路由句柄)
+    - [请求方法](#请求方法)
     - [响应方法](#响应方法)
     - [app.route()](#approute)
     - [express.Router](#expressrouter)
@@ -23,6 +24,8 @@
     - [使用Handlebars](#使用handlebars)
 * [调试 Express](调试-express)
     - [命令](#命令)
+
+
 # express 应用生成器
 
 ```bash
@@ -162,6 +165,18 @@ var cb2 = function (req, res) {
 
 app.get('/example/c', [cb0, cb1, cb2]);
 ```
+
+## 请求方法
+
+> 下表中请求对象（req）的方法向服务器发送请求。
+
+| 方法 | 描述 |
+| - | - |
+| req.body() | 获取请求数据 |
+| req.cookies | 获取请求中携带的cookie |
+| req.originalUrl | 获取原始请求url |
+| req.params | 获取地址栏设定的参数（/user/:name） |
+| req.query | 获取地址栏参数对象 |
 
 ## 响应方法
 
@@ -363,7 +378,7 @@ app.use(cookieParser());
 
 # 模板引擎
 
-> 有一些模板引擎不遵循这种约定，Consolidate.js 能将 Node 中所有流行的模板引擎映射为这种约定，这样就可以和 Express 无缝衔接。
+> 和 Express 兼容的模板引擎，比如 Jade，通过 res.render() 调用其导出方法 __express(filePath, options, callback) 渲染模板。有一些模板引擎不遵循这种约定，Consolidate.js 能将 Node 中所有流行的模板引擎映射为这种约定，这样就可以和 Express 无缝衔接。
 
 ## 使用Jade
 
@@ -401,4 +416,3 @@ $ DEBUG=express:* node index.js
 ```bash
 > set DEBUG=express:* & node index.js
 ```
-
