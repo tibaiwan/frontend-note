@@ -1,6 +1,6 @@
 # Handlebars 常用语法
 
-[handlebars 官网](https://handlebarsjs.com/)
+[[handlebars 官网]](https://handlebarsjs.com/)
 
 * [简单示例](#简单示例)
 * [HTML 转义](#html-转义)
