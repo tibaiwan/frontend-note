@@ -171,11 +171,13 @@ app.get('/example/c', [cb0, cb1, cb2]);
 
 | 方法 | 描述 |
 | - | - |
-| req.body | 获取请求数据 |
+| req.body | 获取请求主体 |
 | req.cookies | 获取请求中携带的cookie |
 | req.originalUrl | 获取原始请求url |
-| req.params | 获取地址栏设定的参数（/user/:name） |
-| req.query | 获取地址栏参数对象 |
+| req.params | 获取路由的parameters（/user/:name） |
+| req.query | 获取URL的查询参数串 |
+| req.path | 获取请求路径 |
+| req.protocol | 获取协议类型 |
 
 ## 响应方法
 
