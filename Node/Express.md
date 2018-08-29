@@ -1,6 +1,6 @@
-# Express 官网笔记
+# Express 官网笔记整理
 
-[express 官网](http://www.expressjs.com.cn/)
+[[express 官网]](http://www.expressjs.com.cn/)
 
 * [express 应用生成器](express-应用生成器)
 * [静态文件托管](#静态文件托管)
@@ -24,7 +24,6 @@
     - [使用Handlebars](#使用handlebars)
 * [调试 Express](调试-express)
     - [命令](#命令)
-
 
 # express 应用生成器
 
@@ -172,7 +171,7 @@ app.get('/example/c', [cb0, cb1, cb2]);
 
 | 方法 | 描述 |
 | - | - |
-| req.body() | 获取请求数据 |
+| req.body | 获取请求数据 |
 | req.cookies | 获取请求中携带的cookie |
 | req.originalUrl | 获取原始请求url |
 | req.params | 获取地址栏设定的参数（/user/:name） |
