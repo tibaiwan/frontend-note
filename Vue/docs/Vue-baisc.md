@@ -69,10 +69,8 @@ vm.$watch('a', function (newValue, oldValue) {
 
 生命周期图示（滚动图片）：
 
-<div style="width: 700px;height: 400px;overflow-y: scroll;">
-  <div>
-    <img src="./images/lifecycle.png" style="width: 100%;" />
-  </div>
+<div>
+  <img src="../images/lifecycle.png" style="width: 650px;" />
 </div>
 
 ## 模板语法
