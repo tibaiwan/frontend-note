@@ -70,7 +70,7 @@ vm.$watch('a', function (newValue, oldValue) {
 生命周期图示（滚动图片）：
 
 <div>
-  <img src="../images/lifecycle.png" style="width: 650px;" />
+  <img src="../images/lifecycle.png" width=650 />
 </div>
 
 ## 模板语法
