@@ -1,6 +1,6 @@
 # Vuex 笔记
 
-* [state](#state)
+* [State](#state)
 * [Getter](#getter)
 * [Mutation](#mutation)
 * [Action](#action)
@@ -29,7 +29,7 @@ const store = new Vuex.Store({
 })
 ```
 
-## state
+## State
 
 ### 单一状态树
 

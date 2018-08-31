@@ -14,5 +14,12 @@
 >+ [网易云音乐](https://binaryify.github.io/NeteaseCloudMusicApi/#/)
 >+ [聚合数据](https://www.juhe.cn/)
 
+## 简历制作
+
+>+ [Markdown 简历](https://github.com/geekcompany/ResumeSample)
+>+ [超级简历](https://www.wondercv.com/)
+
 ## 其他
 >+ [Chrome 插件](./Chrome-plugin/README.md)
+>+ [LICEcap - 屏幕录制转GIF](https://licecap.en.softonic.com/?ex=CAT-752.1)
+

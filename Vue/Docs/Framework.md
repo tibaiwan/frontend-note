@@ -1,4 +1,5 @@
-## Vue2.X 项目结构
+# Vue2.5+ 项目结构
+
 > 技术栈：vue, vue-router, vuex, axios, iview, less
 
 <pre>
