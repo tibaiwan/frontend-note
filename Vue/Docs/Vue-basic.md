@@ -561,7 +561,7 @@ Vue.component('button-counter', {
 
 ### 组件的复用
 
-```js
+```html
 <div id="components-demo">
   <button-counter></button-counter>
   <button-counter></button-counter>
