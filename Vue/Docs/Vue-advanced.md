@@ -91,3 +91,227 @@ requireComponent.keys().forEach(fileName => {
 })
 ```
 
+## Prop
+
+### Prop 类型
+
+```js
+props: {
+  title: String,
+  likes: Number,
+  isPublished: Boolean,
+  commentIds: Array,
+  author: Object
+}
+```
+
+### 传递静态或动态 Prop
+
+```html
+<!-- 静态赋值：字符串类型独有 -->
+<blog-post title="My journey with Vue"></blog-post>
+<!-- 动态赋予一个变量的值 -->
+<blog-post v-bind:title="post.title"></blog-post>
+```
+
+### 传入一个数字、布尔值、数组、对象、一个对象的所有属性
+
+```html
+<!-- 数字 -->
+<blog-post v-bind:likes="post.likes"></blog-post>
+<!-- 布尔值 -->
+<blog-post v-bind:is-published="post.isPublished"></blog-post>
+<!-- 数组 -->
+<blog-post v-bind:comment-ids="post.commentIds"></blog-post>
+<!-- 对象 -->
+<blog-post v-bind:author="post.author"></blog-post>
+<!-- 传入一个对象的所有属性 -->
+<blog-post v-bind="post"></blog-post>
+<!-- 上面等价于 -->
+<blog-post v-bind:id="post.id" v-bind:title="post.title"></blog-post>
+```
+
+### 单向数据流
+
+> 父级 prop 的更新会向下流动到子组件中，但是反过来则不行。每次父级组件发生更新时，子组件中所有的 prop 都将会刷新为最新的值。
+
+### Prop 验证
+
+常用验证方式：
+```js
+Vue.component('my-component', {
+  props: {
+    // 基础的类型检查 (`null` 匹配任何类型)
+    propA: Number,
+    // 多个可能的类型
+    propB: [String, Number],
+    // 必填的字符串
+    propC: {
+      type: String,
+      required: true
+    },
+    // 带有默认值的数字
+    propD: {
+      type: Number,
+      default: 100
+    },
+    // 带有默认值的对象
+    propE: {
+      type: Object,
+      // 对象或数组默认值必须从一个工厂函数获取
+      default: function () {
+        return { message: 'hello' }
+      }
+    },
+    // 自定义验证函数
+    propF: {
+      validator: function (value) {
+        // 这个值必须匹配下列字符串中的一个
+        return ['success', 'warning', 'danger'].indexOf(value) !== -1
+      }
+    }
+  }
+})
+```
+
+类型检查，type选项：
+- String
+- Number
+- Boolean
+- Array
+- Object
+- Date
+- Function
+- Symbol
+
+### 非 Prop 的特性
+
+> 组件可以接受任意的非 Prop 特性，而这些特性会被添加到这个组件的根元素上。
+
+替换/合并已有的特性：style 和 class 特性会被合并，其他特性会被替换。
+禁用特性继承：组件选项inheritAttrs: false。
+
+## 自定义事件
+
+### 事件名
+
+```js
+this.$emit('myEvent')
+```
+
+> 推荐使用 kebab-case 的事件名。
+
+### 自定义组件的 v-model
+
+> 一个组件上的 v-model 默认会利用名为 value 的 prop 和名为 input 的事件。
+
+## 插槽
+
+### 插槽内容
+
+> Vue 实现了一套内容分发的 API，将 <slot> 元素作为承载分发内容的出口。
+
+### 具名插槽
+
+示例：  
+模板`<base-layout>`
+
+`<slot>` 元素有一个特殊的特性：name。这个特性可以用来定义额外的插槽。
+```html
+<div class="container">
+  <header>
+    <slot name="header"></slot>
+  </header>
+  <main>
+    <!-- 默认插槽，作为所有未匹配到插槽的内容的统一出口 -->
+    <slot></slot>
+  </main>
+  <footer>
+    <slot name="footer"></slot>
+  </footer>
+</div>
+```
+
+使用：在一个父组件的 `<template>` 元素上使用 slot 特性。
+```html
+<base-layout>
+  <template slot="header">
+    <h1>Here might be a page title</h1>
+  </template>
+
+  <p>A paragraph for the main content.</p>
+  <p>And another one.</p>
+
+  <template slot="footer">
+    <p>Here's some contact info</p>
+  </template>
+</base-layout>
+```
+
+渲染结果：
+```html
+<div class="container">
+  <header>
+    <h1>Here might be a page title</h1>
+  </header>
+  <main>
+    <p>A paragraph for the main content.</p>
+    <p>And another one.</p>
+  </main>
+  <footer>
+    <p>Here's some contact info</p>
+  </footer>
+</div>
+```
+
+### 插槽的默认内容
+
+> 可以在 `<slot>` 标签内部指定默认的内容
+
+### 编译作用域
+
+> 父组件模板的所有东西都会在父级作用域内编译；子组件模板的所有东西都会在子级作用域内编译。
+
+### 作用域插槽
+
+示例：
+`<todo-list>`
+```html
+<ul>
+  <li
+    v-for="todo in todos"
+    v-bind:key="todo.id"
+  >
+    <!-- 我们为每个 todo 准备了一个插槽，-->
+    <!-- 将 `todo` 对象作为一个插槽的 prop 传入。-->
+    <slot v-bind:todo="todo">
+      <!-- 回退的内容 -->
+      {{ todo.text }}
+    </slot>
+  </li>
+</ul>
+```
+使用：
+```html
+<todo-list v-bind:todos="todos">
+  <!-- 将 `slotProps` 定义为插槽作用域的名字 -->
+  <template slot-scope="slotProps">
+    <!-- 为待办项自定义一个模板，-->
+    <!-- 通过 `slotProps` 定制每个待办项。-->
+    <span v-if="slotProps.todo.isComplete">✓</span>
+    {{ slotProps.todo.text }}
+  </template>
+</todo-list>
+```
+
+### 解构 slot-scope
+
+```html
+<todo-list v-bind:todos="todos">
+  <template slot-scope="{ todo }">
+    <span v-if="todo.isComplete">✓</span>
+    {{ todo.text }}
+  </template>
+</todo-list>
+```
+
