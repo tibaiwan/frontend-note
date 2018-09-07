@@ -315,3 +315,23 @@ this.$emit('myEvent')
 </todo-list>
 ```
 
+## 动态组件 & 异步组件
+
+### 在动态组件上使用 keep-alive
+
+> 在组件之间切换的时候，可以保持这些组件的状态，以避免反复重渲染导致的性能问题。
+
+```html
+<!-- 失活的组件将会被缓存！-->
+<keep-alive>
+  <component v-bind:is="currentTabComponent"></component>
+</keep-alive>
+```
+
+### 异步组件
+
+> Vue 允许你以一个工厂函数的方式定义你的组件，这个工厂函数会异步解析你的组件定义。Vue 只有在这个组件需要被渲染的时候才会触发该工厂函数，且会把结果缓存起来供未来重渲染。
+
+
+
+
