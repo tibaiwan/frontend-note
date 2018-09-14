@@ -332,6 +332,72 @@ this.$emit('myEvent')
 
 > Vue 允许你以一个工厂函数的方式定义你的组件，这个工厂函数会异步解析你的组件定义。Vue 只有在这个组件需要被渲染的时候才会触发该工厂函数，且会把结果缓存起来供未来重渲染。
 
+示例1
+```js
+Vue.component('async-example', function (resolve, reject) {
+  setTimeout(function () {
+    // 向 `resolve` 回调传递组件定义
+    resolve({
+      template: '<div>I am async!</div>'
+    })
+  }, 1000)
+})
+```
 
+示例2，结合webpack的code-splitting 功能
+```js
+Vue.component('async-webpack-example', function (resolve) {
+  // 这个特殊的 `require` 语法将会告诉 webpack
+  // 自动将你的构建代码切割成多个包，这些包
+  // 会通过 Ajax 请求加载
+  require(['./my-async-component'], resolve)
+})
+```
 
+示例3，在工厂函数中返回一个 Promise
+```js
+Vue.component(
+  'async-webpack-example',
+  // 这个 `import` 函数会返回一个 `Promise` 对象。
+  () => import('./my-async-component')
+)
+```
 
+## 处理边界情况
+
+### 访问根元素
+
+```js
+this.$root.XXX
+```
+
+### 访问父级组件实例
+
+```js
+this.$parent.XXX
+```
+
+### 访问子组件实例或元素
+
+```html
+<base-input ref="usernameInput"></base-input>
+```
+```js
+this.$refs.XXX
+```
+
+### 依赖注入
+
+父级组件
+```js
+provide: function () {
+  return {
+    getMap: this.getMap
+  }
+}
+```
+
+子级孙子级组件
+```js
+inject: ['getMap']
+```
