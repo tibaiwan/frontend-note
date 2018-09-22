@@ -22,4 +22,4 @@
 ## 其他
 >+ [Chrome 插件](./Chrome-plugin/README.md)
 >+ [LICEcap - 屏幕录制转GIF](https://licecap.en.softonic.com/?ex=CAT-752.1)
-
+>+ [佛祖镇楼系列](./Docs/Character-Picture.md)
