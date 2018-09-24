@@ -11,8 +11,9 @@
 - [排序算法](./Other/Algorithm/README.md)
 - [设计模式](./Other/Pattern/README.md)
 - [性能优化](./Other/Performance/README.md)
+- [浏览器](./Other/Browser/README.md)
 - [开发规范](./Other/Normalization/README.md)
-
+- [原理类知识点](./Other/theory/README.md)
 
 ## 框架或语言
 
