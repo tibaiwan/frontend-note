@@ -1,17 +1,19 @@
 # CSS
 
-* [盒模型](#盒模型)
-* [获取文档或者元素的宽高](#获取文档或者元素的宽高)
-* [位置 Position]()
-* [Flex 弹性布局](./Docs/Flex.md)
-* [Grid 网格布局](./Docs/Grid.md)
-* [Transform](./Docs/Transform.md)
-* [Transition](./Docs/Transition.md)
-* [Animation](./Docs/Animation.md)
-* 常见布局
-    >1 . [左边固定，右边自适应]()  
-    >2 . [固定页脚在文档以及窗口底部]()  
-* [常用 CSS 效果 Demos]()
+- [盒模型](#盒模型)
+- [获取文档或者元素的宽高](#获取文档或者元素的宽高)
+- [位置 Position]()
+- [Flex 弹性布局](./Docs/Flex.md)
+- [Grid 网格布局](./Docs/Grid.md)
+- [Transform](./Docs/Transform.md)
+- [Transition](./Docs/Transition.md)
+- [Animation](./Docs/Animation.md)
+- 常见布局
+    - [左边固定，右边自适应]()  
+    - [固定页脚在文档以及窗口底部](固定页脚在文档以及窗口底部)  
+- 常用 CSS 效果
+    - [导航栏，下划线跟随光标效果](https://codepen.io/tibaiwan/pen/oazVoQ)
+
 
 ## 盒模型
 
@@ -24,8 +26,8 @@ box-sizing:border-box;
 box-sizing:content-box;
 ```
 
-<img src="./Image/IE-model.webp" width="600"/>
-<img src="./Image/standard-model.webp" width="600"/>
+<img src="./Images/IE-model.webp" width="600"/>
+<img src="./Images/standard-model.webp" width="600"/>
 
 ## 获取文档或者元素的宽高
 
@@ -45,3 +47,4 @@ box-sizing:content-box;
 - 滚动条卷上去的高度和向右卷的宽度： document.body.scrollTop/scrollLeft
 - 网页可见区域的高度和宽度（不加边线）： document.body.clientHeight/clientWidth
 - 网页可见区域的高度和宽度（加边线）： document.body.offsetHeight/offsetWidth
+
