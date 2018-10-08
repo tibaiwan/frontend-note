@@ -10,6 +10,7 @@
 - [简述 Vue 中的 MVVM 模型](#%E7%AE%80%E8%BF%B0-vue-%E4%B8%AD%E7%9A%84-mvvm-%E6%A8%A1%E5%9E%8B)
 - [Vue 路由中 hash 模式和 history 模式区别](#vue-%E8%B7%AF%E7%94%B1%E4%B8%AD-hash-%E6%A8%A1%E5%BC%8F%E5%92%8C-history-%E6%A8%A1%E5%BC%8F%E5%8C%BA%E5%88%AB)
 - [Vue 路由中 $route 和 $router 的区别](#vue-%E8%B7%AF%E7%94%B1%E4%B8%AD-route-%E5%92%8C-router-%E7%9A%84%E5%8C%BA%E5%88%AB)
+- [v-for 响应式 key, index 及 item.id 参数的异同](#v-for-%E5%93%8D%E5%BA%94%E5%BC%8F-key-index-%E5%8F%8A-itemid-%E5%8F%82%E6%95%B0%E7%9A%84%E5%BC%82%E5%90%8C)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -119,6 +120,16 @@ history ：hashchange 只能改变 # 后面的代码片段，history api （push
 
 ## Vue 路由中 $route 和 $router 的区别
 
-$route是“路由信息对象”，包括path，params，hash，query，fullPath，matched，name等路由信息参数。  
-$router是“路由实例”对象包括了路由的跳转方法，钩子函数等。
+$route 是“路由信息对象”，包括 path，params，hash，query，fullPath，matched，name 等路由信息参数。  
+$router 是“路由实例”对象包括了路由的跳转方法，钩子函数等。
 
+## v-for 响应式 key, index 及 item.id 参数的异同
+
+```html
+<ul>
+  <li v-for="(item, key, index) in items" :key="item.id">{{item.id}}</li>
+</ul>
+```
+使用 v-for 渲染元素时，使用元素自身的 id 属性去指定渲染元素的 key 值有利于单个元素的重新渲染，若采用 index 和 key，在改变渲染出来的 DOM 结构时，会触发所有元素的重新渲染，当数据过大时，可能会造成性能负担。
+
+[See Also](https://github.com/TimRChen/Vue-v-for-explor#vue-20-v-for-%E5%93%8D%E5%BA%94%E5%BC%8Fkey-index%E5%8F%8Aitemid%E5%8F%82%E6%95%B0%E5%AF%B9v-bindkey%E5%80%BC%E9%80%A0%E6%88%90%E5%B7%AE%E5%BC%82%E7%A0%94%E7%A9%B6)
