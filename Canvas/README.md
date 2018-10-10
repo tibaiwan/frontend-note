@@ -159,8 +159,65 @@ img.onload = function(){
 - `shadowBlur = float` 设定阴影的模糊程度
 - `shadowColor = color` 设定阴影颜色效果，默认是全透明的黑色
 
+## 绘制文本
 
+### 绘制方法
 
+- `fillText(text, x, y [, maxWidth])` 在指定的(x,y)位置填充指定的文本，绘制的最大宽度是可选的.
+- `strokeText(text, x, y [, maxWidth])` 在指定的(x,y)位置绘制文本边框，绘制的最大宽度是可选的.
 
+### 有样式的文本
+
+`font = value` 文本的样式，默认的字体是 10px sans-serif。  
+`textAlign = value` 文本对齐选项. 可选的值包括：start, end, left, right or center。  
+`textBaseline = value` 基线对齐选项. 可选的值包括：top, hanging, middle, alphabetic, ideographic, bottom。  
+`direction = value` 文本方向。可能的值包括：ltr, rtl, inherit。
+
+### 预测量文本宽度
+
+- `measureText()` 将返回一个 TextMetrics对象的宽度、所在像素。
+
+## 使用图片
+
+### 绘制图片
+
+- `drawImage(image, x, y)` 使用 drawImage 方法将图片渲染到 canvas 里。  
+- `drawImage(image, x, y, width, height)` 缩放 Scaling，width 和 height，用来控制向canvas画入时应该缩放的大小。  
+- `drawImage(image, sx, sy, sWidth, sHeight, dx, dy, dWidth, dHeight)` 切片 Slicing，见图解。
+
+![解析图](./Images/Canvas_drawimage.jpg)
+
+## 变形
+
+### 状态的保存和恢复 Saving and restoring state
+
+- `save()` 保存canvas状态到栈中
+- `restore()` 恢复上一个canvas状态
+
+### 移动 Translating
+
+- `translate(x, y)` x 是左右偏移量，y 是上下偏移量。
+
+### 旋转 Rotating
+
+- `rotate(angle)` 旋转的角度(angle)，它是顺时针方向的，以弧度为单位的值。
+
+### 缩放 Scaling
+
+- `scale(x, y)` x,y 分别是横轴和纵轴的缩放因子，它们都必须是正值。
+
+### 变形 Transforms
+
+- `transform(m11, m12, m21, m22, dx, dy)` 变形矩阵
+
+## 合成与裁剪
+
+### 组合 Compositing
+
+- `globalCompositeOperation = type` 设定了在画新图形时采用的遮盖策略。
+
+[组合 Compositing](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing)
+
+## 基本动画
 
 
