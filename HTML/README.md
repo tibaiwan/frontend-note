@@ -1,10 +1,16 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
 # HTML
 
-* [HTML5 主要功能](#html5-主要功能)
-* [HTML5 部分新标签](#html5-部分新标签)
-* [常用 Meta 标签](#常用-meta-标签)
-* [Cookie, LocalStorage 与 SessionStorage](#cookie,-localstorage-与-sessionstorage)
-* [Canvas](#canvas)
+- [HTML5 主要功能](#html5-%E4%B8%BB%E8%A6%81%E5%8A%9F%E8%83%BD)
+- [HTML5 部分新标签](#html5-%E9%83%A8%E5%88%86%E6%96%B0%E6%A0%87%E7%AD%BE)
+- [常用 Meta 标签](#%E5%B8%B8%E7%94%A8-meta-%E6%A0%87%E7%AD%BE)
+- [Cookie, LocalStorage 与 SessionStorage](#cookie-localstorage-%E4%B8%8E-sessionstorage)
+- [Canvas](./Canvas.md)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## HTML5 主要功能
 - 语义化标签：能够让你更恰当地描述你的内容是什么。

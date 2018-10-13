@@ -1,7 +1,7 @@
 # Canvas 常用知识点整理
 
 [MDN Canvas 教程](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)  
-[Canvas Demos](./Demos.md)
+[Canvas Demos](./Canvas-demos.md)
 
 ## 简介
 
