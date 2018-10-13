@@ -1,11 +1,12 @@
 # Canvas 常用知识点整理
 
-[MDN Canvas](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)
+[MDN Canvas 教程](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)  
+[Canvas Demos](./Demos.md)
 
 ## 简介
 
 `<canvas>` 是 HTML5 新增的元素，可用于通过使用JavaScript中的脚本来绘制图形。  
-`<canvas>` 标签只有两个属性—— width和height。  
+`<canvas>` 标签只有两个属性 —— width和height。  
 当没有设置宽度和高度的时候，canvas会初始化宽度为300像素和高度为150像素。  
 
 一个模板骨架
@@ -220,4 +221,75 @@ img.onload = function(){
 
 ## 基本动画
 
+### 基本步骤
+
+1、清空 canvas  
+2、保存 canvas 状态  
+3、绘制动画图形（animated shapes）  
+4、恢复 canvas 状态  
+
+### 操控动画
+
+- setInterval(function, delay)
+- setTimeout(function, delay)
+- requestAnimationFrame(callback)
+
+## 像素操作
+
+### 保存图片
+
+- canvas.toDataURL('image/png')
+- canvas.toDataURL('image/jpeg', quality)
+  - quality: 可以有选择地提供从0到1的品质量，1表示最好品质，0基本不被辨析但有比较小的文件大小。
+- canvas.toBlob(callback, type, encoderOptions)
+
+## 点击区域
+
+- boolean ctx.isPointInPath(x, y)
+- boolean ctx.isPointInPath(x, y, fillRule)
+  - fillRule: 用来决定点在路径内还是在路径外的算法。  
+  允许的值：  
+    - "nonzero": 非零环绕规则 ，默认的规则。  
+    - "evenodd": 奇偶环绕原则 。  
+- CanvasRenderingContext2D.addHitRegion() (实验室功能)
+- CanvasRenderingContext2D.removeHitRegion()
+- CanvasRenderingContext2D.clearHitRegions()
+
+示例：
+```js
+var canvas = document.getElementById("canvas");
+var ctx = canvas.getContext("2d");
+
+ctx.beginPath();
+ctx.arc(70, 80, 10, 0, 2 * Math.PI, false);
+ctx.fill();
+ctx.addHitRegion({id: "circle"});
+
+canvas.addEventListener("mousemove", function(event){
+  if(event.region) {
+    alert("hit region: " + event.region);
+  }
+});
+```
+
+## canvas 的优化
+
+- 在离屏canvas上预渲染相似的图形或重复的对象
+- 避免浮点数的坐标点，用整数取而代之
+- 不要在用drawImage时缩放图像
+- 使用多层画布去画一个复杂的场景
+- 用CSS设置大的背景图
+- 用CSS transforms特性缩放画布
+- 关闭透明度（var ctx = canvas.getContext('2d', { alpha: false });）
+
+更多贴士：
+
+- 将画布的函数调用集合到一起（例如，画一条折线，而不要画多条分开的直线）
+- 避免不必要的画布状态改变
+- 渲染画布中的不同点，而非整个新状态
+- 尽可能避免 shadowBlur特性
+- 尽可能避免text rendering
+- 使用不同的办法去清除画布(clearRect() vs. fillRect() vs. 调整canvas大小)
+- 有动画，请使用window.requestAnimationFrame() 而非window.setInterval()
+- 请谨慎使用大型物理库
 
