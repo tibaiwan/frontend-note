@@ -48,8 +48,6 @@
 - `rect(x, y, width, height)` 绘制一个左上角坐标为（x,y），宽高为width以及height的矩形。
 - `clearRect(x, y, width, height)` 清除指定矩形区域，让清除部分完全透明。
 
-[CodePen](https://codepen.io/tibaiwan/pen/yRgwpe?editors=1010)
-
 ### 绘制路径
 
 图形的基本元素是路径。路径是通过不同颜色和宽度的线段或曲线相连形成的不同形状的点的集合。
@@ -219,6 +217,10 @@ img.onload = function(){
 
 [组合 Compositing](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API/Tutorial/Compositing)
 
+### 裁切路径
+
+- `clip()` 将当前正在构建的路径转换为当前的裁剪路径。 
+
 ## 基本动画
 
 ### 基本步骤
@@ -287,7 +289,7 @@ canvas.addEventListener("mousemove", function(event){
 - 将画布的函数调用集合到一起（例如，画一条折线，而不要画多条分开的直线）
 - 避免不必要的画布状态改变
 - 渲染画布中的不同点，而非整个新状态
-- 尽可能避免 shadowBlur特性
+- 尽可能避免shadowBlur特性
 - 尽可能避免text rendering
 - 使用不同的办法去清除画布(clearRect() vs. fillRect() vs. 调整canvas大小)
 - 有动画，请使用window.requestAnimationFrame() 而非window.setInterval()

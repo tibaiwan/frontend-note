@@ -2,7 +2,7 @@
 
 ## 基础知识整理
 
-- [HTML](./HTML/README.md)
+- [HTML](./HTML/HTML.md)
 - [CSS](./CSS/README.md)
 - [JavaScript](./JavaScript/README.md)
 - [Canvas](./Canvas/README.md)
