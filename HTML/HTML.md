@@ -8,7 +8,7 @@
 - [HTML5 部分新标签](#html5-%E9%83%A8%E5%88%86%E6%96%B0%E6%A0%87%E7%AD%BE)
 - [常用 Meta 标签](#%E5%B8%B8%E7%94%A8-meta-%E6%A0%87%E7%AD%BE)
 - [Cookie, LocalStorage 与 SessionStorage](#cookie-localstorage-%E4%B8%8E-sessionstorage)
-- [Canvas](./Canvas.md)
+- [Canvas 笔记与Demos](./Canvas.md)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 

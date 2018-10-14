@@ -5,7 +5,6 @@
 - [HTML](./HTML/HTML.md)
 - [CSS](./CSS/README.md)
 - [JavaScript](./JavaScript/README.md)
-- [Canvas](./Canvas/README.md)
 - [正则表达式](./RegExp/README.md)
 - [浏览器缓存机制](./Brower-cache/README.md)
 - [移动端相关](./Mobile/README.md)
