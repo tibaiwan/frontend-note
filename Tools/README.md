@@ -1,7 +1,7 @@
 ## 语法命令
 
->+ [Markdown语法](./Markdown/README.md)
 >+ [Git 常用命令](./Git/README.md)
+>+ [Markdown语法](./Markdown/README.md)
 
 ## 在线工具
 >+ [JSON 视图](http://www.bejson.com/jsonviewernew/)
