@@ -1,9 +1,25 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 # Git 常用命令清单
+
+- [工程下载、分支的增删查改](#%E5%B7%A5%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%88%86%E6%94%AF%E7%9A%84%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9)
+  - [工程下载：](#%E5%B7%A5%E7%A8%8B%E4%B8%8B%E8%BD%BD)
+  - [分支的增删查改](#%E5%88%86%E6%94%AF%E7%9A%84%E5%A2%9E%E5%88%A0%E6%9F%A5%E6%94%B9)
+- [查看提交信息日志](#%E6%9F%A5%E7%9C%8B%E6%8F%90%E4%BA%A4%E4%BF%A1%E6%81%AF%E6%97%A5%E5%BF%97)
+- [版本回退](#%E7%89%88%E6%9C%AC%E5%9B%9E%E9%80%80)
+- [文件的添加、提交、拉取、推送、比对、合并](#%E6%96%87%E4%BB%B6%E7%9A%84%E6%B7%BB%E5%8A%A0%E6%8F%90%E4%BA%A4%E6%8B%89%E5%8F%96%E6%8E%A8%E9%80%81%E6%AF%94%E5%AF%B9%E5%90%88%E5%B9%B6)
+- [常用选项和其他命令](#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9%E5%92%8C%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4)
+  - [git 中部分选项解释](#git-%E4%B8%AD%E9%83%A8%E5%88%86%E9%80%89%E9%A1%B9%E8%A7%A3%E9%87%8A)
+  - [其他命令](#%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4)
+- [配置相关](#%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 工程下载、分支的增删查改
 
 ### 工程下载：  
-- clone 远程工程：git clone https://XXXX.git
+- clone 远程工程：git clone `https://XXXX.git`
 - fetch 远程分支到本地某分支：git fetch origin `<orginname>`:`<localname>`
 
 ### 分支的增删查改

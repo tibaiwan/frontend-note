@@ -1,6 +1,6 @@
 ## 语法命令
 
->+ [Git 常用命令](./Git/README.md)
+>+ [Git 常用命令清单](./Git/README.md)
 >+ [Markdown语法](./Markdown/README.md)
 
 ## 在线工具
