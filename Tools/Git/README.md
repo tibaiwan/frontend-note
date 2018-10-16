@@ -18,17 +18,19 @@
 
 ## 工程下载、分支的增删查改
 
-### 工程下载：  
+### 工程下载：
+
 - clone 远程工程：git clone `https://XXXX.git`
 - fetch 远程分支到本地某分支：git fetch origin `<orginname>`:`<localname>`
 
 ### 分支的增删查改
+
 - 查看分支：git branch
 - 查看远程所有分支：git branch -r
 - 查看本地和远程所有分支：git branch -a
 - 创建分支：git branch `<name>`
 - 切换分支：git checkout `<name>`
-- 创建并切换分支：git checkout -b `<name>`
+- 创建并切换分支：git checkout -b `<name>` [origin/`<name>`]
 - 合并某分支到当前分支：git merge `<name>`
 - 把分支推送到远程：git push origin `<name>`
 - 删除本地分支：git branch (-d | -D) `<name>`
@@ -89,6 +91,8 @@
 - `-a`  --all：所有
 
 ### 其他命令
+- 初始化git：  
+$ `git init`
 - 清空工程：  
 $ `git rm -rf .`  
 - 每隔X秒运行一次git pull：  
