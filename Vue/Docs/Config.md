@@ -1,6 +1,30 @@
 # Vue 配置相关问题
 
-## proxyTable
+## 兼容 IE 浏览器
+
+IE报：vuex requires a Promise polyfill in this browser.
+
+安装 `babel-polyfill`
+```js
+npm install -S babel-polyfill
+```
+
+在入口文件 `main.js` 引入
+```js
+import 'babel-polyfill'
+```
+
+配置（webpack.conf.js）
+```js
+module.exports ={
+  entry: {
+    app: ['babel-polyfill', './src/main.js']
+  }
+}
+```
+**注意：** `babel-polyfill` 必要在`main.js`前面才能生效。
+
+## 配置 proxyTable
 
 > Vue 暴露了 proxyTabe 做跨域处理
 
