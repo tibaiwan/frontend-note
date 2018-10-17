@@ -3,17 +3,17 @@
 - [盒模型](#盒模型)
 - [获取文档或者元素的宽高](#获取文档或者元素的宽高)
 - [位置 Position]()
-- [Flex 弹性布局](./Docs/Flex.md)
+- [Flex 弹性布局（阮一峰）](http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html)
 - [Grid 网格布局](./Docs/Grid.md)
 - [Transform](./Docs/Transform.md)
 - [Transition](./Docs/Transition.md)
 - [Animation](./Docs/Animation.md)
 - 常见布局
-    - [左边固定，右边自适应]()  
-    - [固定页脚在文档以及窗口底部](固定页脚在文档以及窗口底部)  
+    - [CSS 左边定宽，右边自适应 flex版](https://codepen.io/tibaiwan/pen/JmpPqr)  
+    - [CSS 左边自适应高度，右边高度不固定 flex版](CSS 左边自适应高度，右边高度不固定 flex版)  
+    - [CSS 页脚固定在页面最底部](https://codepen.io/tibaiwan/pen/qJxbvO)
 - 常用 CSS 效果
     - [导航栏，下划线跟随光标效果](https://codepen.io/tibaiwan/pen/oazVoQ)
-
 
 ## 盒模型
 
