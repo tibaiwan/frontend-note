@@ -10,7 +10,7 @@
 - [Animation](./Docs/Animation.md)
 - 常见布局
     - [CSS 左边定宽，右边自适应 flex版](https://codepen.io/tibaiwan/pen/JmpPqr)  
-    - [CSS 左边自适应高度，右边高度不固定 flex版](CSS 左边自适应高度，右边高度不固定 flex版)  
+    - [CSS 左边自适应高度，右边高度不固定 flex版](https://codepen.io/tibaiwan/pen/GYQRKP)  
     - [CSS 页脚固定在页面最底部](https://codepen.io/tibaiwan/pen/qJxbvO)
 - 常用 CSS 效果
     - [导航栏，下划线跟随光标效果](https://codepen.io/tibaiwan/pen/oazVoQ)
