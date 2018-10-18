@@ -34,4 +34,8 @@
     代码校验：
     避免CSS表达式，避免重定向。
 
-SEE ALSO [《前端工程与性能分析》](https://div.io/topic/371)
+SEE ALSO：
+
+[《前端工程与性能分析》](https://div.io/topic/371)   
+[一篇文章搞定前端面试 -- 前端性能优化](https://juejin.im/post/5bbaa549e51d450e827b6b13#heading-8)  
+[vue + webpack 前端性能优化](https://juejin.im/post/5bc5c106e51d450e7a253e1b)  

@@ -1,7 +1,37 @@
-# React 官网笔记
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+# React 文档简记
 
 [React 官网](https://reactjs.org/)  
 [React 中文官网](https://react.docschina.org/)
+
+- [Hello World](#hello-world)
+- [JSX 简介](#jsx-%E7%AE%80%E4%BB%8B)
+  - [JSX 属性](#jsx-%E5%B1%9E%E6%80%A7)
+  - [JSX 嵌套](#jsx-%E5%B5%8C%E5%A5%97)
+- [元素渲染](#%E5%85%83%E7%B4%A0%E6%B8%B2%E6%9F%93)
+- [组件 & Props](#%E7%BB%84%E4%BB%B6--props)
+  - [函数定义组件](#%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6)
+  - [类定义组件](#%E7%B1%BB%E5%AE%9A%E4%B9%89%E7%BB%84%E4%BB%B6)
+- [State](#state)
+- [生命周期](#%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F)
+- [事件处理](#%E4%BA%8B%E4%BB%B6%E5%A4%84%E7%90%86)
+- [条件渲染](#%E6%9D%A1%E4%BB%B6%E6%B8%B2%E6%9F%93)
+  - [元素变量](#%E5%85%83%E7%B4%A0%E5%8F%98%E9%87%8F)
+  - [与运算符 &&](#%E4%B8%8E%E8%BF%90%E7%AE%97%E7%AC%A6-)
+  - [三目运算符](#%E4%B8%89%E7%9B%AE%E8%BF%90%E7%AE%97%E7%AC%A6)
+  - [阻止组件渲染](#%E9%98%BB%E6%AD%A2%E7%BB%84%E4%BB%B6%E6%B8%B2%E6%9F%93)
+- [列表 & Keys](#%E5%88%97%E8%A1%A8--keys)
+  - [渲染多个组件](#%E6%B8%B2%E6%9F%93%E5%A4%9A%E4%B8%AA%E7%BB%84%E4%BB%B6)
+- [表单](#%E8%A1%A8%E5%8D%95)
+  - [受控组件](#%E5%8F%97%E6%8E%A7%E7%BB%84%E4%BB%B6)
+  - [多个输入的解决方法](#%E5%A4%9A%E4%B8%AA%E8%BE%93%E5%85%A5%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%B3%95)
+- [状态提升](#%E7%8A%B6%E6%80%81%E6%8F%90%E5%8D%87)
+- [组合 vs 继承](#%E7%BB%84%E5%90%88-vs-%E7%BB%A7%E6%89%BF)
+  - [包含关系](#%E5%8C%85%E5%90%AB%E5%85%B3%E7%B3%BB)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Hello World
 
@@ -67,7 +97,7 @@ const element = <h1>Hello, world</h1>;
 4、提取组件：可以将组件切分为更小的组件。  
 5、Props 是只读性的。
 
-### 函数定义
+### 函数定义组件
 
 ```js
 function Welcome(props) {
@@ -130,7 +160,7 @@ class ExampleComponent extends React.Component {
   // 可以在该函数中进行请求或者订阅
   componentDidMount() {}
   // 用于获得最新的 DOM 数据
-  getSnapshotBeforeUpdate() {}
+  getSnapshotBeforeUpdate(prevProps, prevState) {}
   // 组件即将销毁
   // 可以在此处移除订阅，定时器等等
   componentWillUnmount() {}
