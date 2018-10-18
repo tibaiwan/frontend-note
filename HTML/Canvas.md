@@ -1,7 +1,48 @@
-# Canvas 常用知识点整理
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+# Canvas 常用知识清单
 
 [MDN Canvas 教程](https://developer.mozilla.org/zh-CN/docs/Web/API/Canvas_API)  
 [Canvas Demos](./Canvas-demos.md)
+
+- [简介](#%E7%AE%80%E4%BB%8B)
+- [栅格](#%E6%A0%85%E6%A0%BC)
+- [绘制图形](#%E7%BB%98%E5%88%B6%E5%9B%BE%E5%BD%A2)
+  - [绘制矩形](#%E7%BB%98%E5%88%B6%E7%9F%A9%E5%BD%A2)
+  - [绘制路径](#%E7%BB%98%E5%88%B6%E8%B7%AF%E5%BE%84)
+  - [二次贝塞尔曲线及三次贝塞尔曲线](#%E4%BA%8C%E6%AC%A1%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF%E5%8F%8A%E4%B8%89%E6%AC%A1%E8%B4%9D%E5%A1%9E%E5%B0%94%E6%9B%B2%E7%BA%BF)
+  - [Path2D 对象](#path2d-%E5%AF%B9%E8%B1%A1)
+- [添加样式和颜色](#%E6%B7%BB%E5%8A%A0%E6%A0%B7%E5%BC%8F%E5%92%8C%E9%A2%9C%E8%89%B2)
+  - [色彩 Colors](#%E8%89%B2%E5%BD%A9-colors)
+  - [线型 Line styles](#%E7%BA%BF%E5%9E%8B-line-styles)
+  - [渐变 Gradients](#%E6%B8%90%E5%8F%98-gradients)
+  - [图案样式 Patterns](#%E5%9B%BE%E6%A1%88%E6%A0%B7%E5%BC%8F-patterns)
+  - [阴影 Shadows](#%E9%98%B4%E5%BD%B1-shadows)
+- [绘制文本](#%E7%BB%98%E5%88%B6%E6%96%87%E6%9C%AC)
+  - [绘制方法](#%E7%BB%98%E5%88%B6%E6%96%B9%E6%B3%95)
+  - [有样式的文本](#%E6%9C%89%E6%A0%B7%E5%BC%8F%E7%9A%84%E6%96%87%E6%9C%AC)
+  - [预测量文本宽度](#%E9%A2%84%E6%B5%8B%E9%87%8F%E6%96%87%E6%9C%AC%E5%AE%BD%E5%BA%A6)
+- [使用图片](#%E4%BD%BF%E7%94%A8%E5%9B%BE%E7%89%87)
+  - [绘制图片](#%E7%BB%98%E5%88%B6%E5%9B%BE%E7%89%87)
+- [变形](#%E5%8F%98%E5%BD%A2)
+  - [状态的保存和恢复 Saving and restoring state](#%E7%8A%B6%E6%80%81%E7%9A%84%E4%BF%9D%E5%AD%98%E5%92%8C%E6%81%A2%E5%A4%8D-saving-and-restoring-state)
+  - [移动 Translating](#%E7%A7%BB%E5%8A%A8-translating)
+  - [旋转 Rotating](#%E6%97%8B%E8%BD%AC-rotating)
+  - [缩放 Scaling](#%E7%BC%A9%E6%94%BE-scaling)
+  - [变形 Transforms](#%E5%8F%98%E5%BD%A2-transforms)
+- [合成与裁剪](#%E5%90%88%E6%88%90%E4%B8%8E%E8%A3%81%E5%89%AA)
+  - [组合 Compositing](#%E7%BB%84%E5%90%88-compositing)
+  - [裁切路径](#%E8%A3%81%E5%88%87%E8%B7%AF%E5%BE%84)
+- [基本动画](#%E5%9F%BA%E6%9C%AC%E5%8A%A8%E7%94%BB)
+  - [基本步骤](#%E5%9F%BA%E6%9C%AC%E6%AD%A5%E9%AA%A4)
+  - [操控动画](#%E6%93%8D%E6%8E%A7%E5%8A%A8%E7%94%BB)
+- [像素操作](#%E5%83%8F%E7%B4%A0%E6%93%8D%E4%BD%9C)
+  - [保存图片](#%E4%BF%9D%E5%AD%98%E5%9B%BE%E7%89%87)
+- [点击区域](#%E7%82%B9%E5%87%BB%E5%8C%BA%E5%9F%9F)
+- [canvas 的优化](#canvas-%E7%9A%84%E4%BC%98%E5%8C%96)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## 简介
 
