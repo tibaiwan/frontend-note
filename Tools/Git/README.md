@@ -138,3 +138,5 @@ $ `git rebase master`
   - git config --global alias.st status
 
 **提示：** Windows 用户可以把配置信息写入`.bat`文件
+
+feature1
