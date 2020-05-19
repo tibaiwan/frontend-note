@@ -30,7 +30,8 @@
 
 >+ [Chrome 插件](./Chrome-plugin/README.md)
 >+ [佛祖镇楼系列](./Docs/Character-Picture.md)
->+ [LICEcap - 屏幕录制转GIF](https://licecap.en.softonic.com/?ex=CAT-752.1)
+>+ [Win 屏幕录制转GIF LICEcap](https://licecap.en.softonic.com/?ex=CAT-752.1)
+>+ [Mac 屏幕录制转GIF Kap](https://getkap.co/)
 >+ [手机抓包 - Charles](https://www.charlesproxy.com/)
     - [教程](https://www.jianshu.com/p/ddef21c3b9ba)
     - [激活码](https://blog.csdn.net/qq_25821067/article/details/79848589)
