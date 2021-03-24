@@ -127,6 +127,8 @@ $ `git rebase master`
 - 修改 git 的 name 和 email ：
   - git config --global user.name `<name>`
   - git config --global user.email `<email>`
+- 删除 git 的错误配置
+  - git config --global --unset user.xxx
 - 修改 git 的 push.default
     - git config --global push.default simple : 推送本地当前分支到远程（远程必须存在）
         - git push --set-upstream origin `<tagName>` : simple 通过此方法创建远程分支并推送
