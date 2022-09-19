@@ -120,6 +120,7 @@ $ `git rebase master`
 - 唤起git图形化工具：`gitk`
 - 查看文件的每个部分是谁修改的：`git blame <fileName>`
     - 设置从第M行开始显示N行：`git blame -L M,+N <fileName>`
+- 刷新本地分支信息与原程保持同步：`git remote prune origin`
 
 ## 配置相关
 
